@@ -2,6 +2,10 @@
 
 A modern, responsive developer portfolio showcasing my technical skills, featured projects, education, and contact information.
 
+## 🔗 Live URL\*\*
+
+https://dev-pf.netlify.app/
+
 ## 🚀 Overview
 
 This portfolio is designed to present my journey as a Full Stack Web Developer, highlight the projects I've built, and provide an easy way to connect with me.
