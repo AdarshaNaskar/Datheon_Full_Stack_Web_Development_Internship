@@ -2,7 +2,7 @@
 
 A modern, responsive developer portfolio showcasing my technical skills, featured projects, education, and contact information.
 
-## 🔗 Live URL\*\*
+## 🔗 Live URL
 
 https://dev-pf.netlify.app/
 
