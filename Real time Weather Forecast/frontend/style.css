@@ -198,27 +198,6 @@ input {
   font-size: 25px;
 }
 
-.live-indicator {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border: 1px solid rgba(67, 220, 151, 0.2);
-  border-radius: 20px;
-  color: #62e5a8;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.live-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #62e5a8;
-  box-shadow: 0 0 10px #62e5a8;
-}
-
 .weather-main {
   display: flex;
   justify-content: space-between;
