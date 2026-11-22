@@ -24,7 +24,7 @@ async function getWeather(city) {
     await new Promise((resolve) => setTimeout(resolve, 800));
 
     const response = await fetch(
-      `http://localhost:3000/api/weather/${encodeURIComponent(city)}`,
+      `${API_BASE_URL}/api/weather/${encodeURIComponent(city)}`,
     );
 
     const data = await response.json();

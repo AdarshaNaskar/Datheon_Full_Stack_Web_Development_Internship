@@ -1,5 +1,4 @@
 import "dotenv/config";
-console.log("API key loaded:", !!process.env.OPENWEATHER_API_KEY);
 import express from "express";
 import cors from "cors";
 import weatherRoutes from "./routes/weather.js";
