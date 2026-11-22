@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101b35" />
+    <title>Atmos - Live Weather</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="weather-app">
+      <!-- Header -->
+      <header class="app-header">
+        <a href="#" class="logo">
+          <span class="logo-icon">☁</span>
+          <span>atmos<span class="logo-dot">.</span></span>
+        </a>
+
+        <div class="header-label">LIVE WEATHER TELEMETRY</div>
+      </header>
+
+      <!-- Search -->
+      <section class="search-section">
+        <div class="search-heading">
+          <p class="eyebrow">WEATHER FORECAST</p>
+          <h1>Discover the weather<br />around the world.</h1>
+          <p class="subtitle">Get real-time weather updates for any city.</p>
+        </div>
+
+        <div class="search-box">
+          <span class="search-icon">⌕</span>
+
+          <input
+            type="text"
+            id="cityInput"
+            placeholder="Search for a city..."
+            autocomplete="off"
+          />
+
+          <button id="searchBtn" type="button">Search <span>→</span></button>
+        </div>
+
+        <div id="errorMessage" class="error-message" hidden></div>
+
+        <div id="loadingIndicator" class="loading-indicator" hidden>
+          <div class="loading-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p>FETCHING WEATHER DATA...</p>
+        </div>
+      </section>
+
+      <!-- Current Weather -->
+      <section class="weather-card">
+        <div class="weather-card-header">
+          <div>
+            <p class="eyebrow">CURRENT WEATHER</p>
+            <h2 id="city">Your City</h2>
+          </div>
+
+          <span class="live-indicator">
+            <span class="live-dot"></span>
+            LIVE
+          </span>
+        </div>
+
+        <div class="weather-main">
+          <div class="weather-primary">
+            <div class="weather-icon"></div>
+
+            <div class="temperature">
+              <span id="temperature">--</span><span class="degree">°C</span>
+            </div>
+
+            <p id="description">Search for a city to get started</p>
+          </div>
+
+          <div class="weather-summary">
+            <div class="summary-item">
+              <span>Feels like</span>
+              <strong id="feelslike">--°C</strong>
+            </div>
+
+            <div class="summary-item">
+              <span>Atmospheric pressure</span>
+              <strong id="pressure">-- hPa</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="weather-details">
+          <div class="details">
+            <div class="detail-icon">💧</div>
+            <div>
+              <p>Humidity</p>
+              <strong id="humidity">--%</strong>
+            </div>
+          </div>
+
+          <div class="details">
+            <div class="detail-icon">💨</div>
+            <div>
+              <p>Wind Speed</p>
+              <strong id="wind">-- km/h</strong>
+            </div>
+          </div>
+
+          <div class="details">
+            <div class="detail-icon"></div>
+            <div>
+              <p>Feels Like</p>
+              <strong id="feelslike-copy">--°C</strong>
+            </div>
+          </div>
+
+          <div class="details">
+            <div class="detail-icon"></div>
+            <div>
+              <p>Pressure</p>
+              <strong id="pressure-copy">-- hPa</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 Day Forecast -->
+      <section class="forecast-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PLAN AHEAD</p>
+            <h2>5-Day Forecast</h2>
+          </div>
+
+          <span class="forecast-label">UPCOMING DAYS</span>
+        </div>
+
+        <div class="forecast-grid" id="forecastContainer">
+          <div class="forecast-card">
+            <p>Day 1</p>
+            <span class="forecast-icon"></span>
+            <strong>--°</strong>
+            <span class="forecast-condition">--</span>
+          </div>
+
+          <div class="forecast-card">
+            <p>Day 2</p>
+            <span class="forecast-icon"></span>
+            <strong>--°</strong>
+            <span class="forecast-condition">--</span>
+          </div>
+
+          <div class="forecast-card">
+            <p>Day 3</p>
+            <span class="forecast-icon"></span>
+            <strong>--°</strong>
+            <span class="forecast-condition">--</span>
+          </div>
+
+          <div class="forecast-card">
+            <p>Day 4</p>
+            <span class="forecast-icon"></span>
+            <strong>--°</strong>
+            <span class="forecast-condition">--</span>
+          </div>
+
+          <div class="forecast-card">
+            <p>Day 5</p>
+            <span class="forecast-icon"></span>
+            <strong>--°</strong>
+            <span class="forecast-condition">--</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="app-footer">
+        <p>ATMOS © <span id="currentYear"></span></p>
+        <p>Weather data powered by OpenWeatherMap</p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
